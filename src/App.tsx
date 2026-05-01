@@ -5,7 +5,7 @@ import { ProductCard } from './components/ProductCard';
 import { Cart } from './components/Cart';
 import { Footer } from './components/Footer';
 import { AdminDashboard } from './components/AdminDashboard';
-import type{ Product, CartItem, Order } from './types';
+import type { Product, CartItem, Order } from './types';
 import { orderStorage } from './utils/storage';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Zap, ShieldCheck, Truck, Lock, User } from 'lucide-react';

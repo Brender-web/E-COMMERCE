@@ -15,6 +15,8 @@ export interface CartItem extends Product {
 
 export type OrderStatus = 'Processing' | 'Shipped' | 'Delivered' | 'Cancelled';
 export type PaymentStatus = 'Pending' | 'Paid' | 'Refunded';
+// Added Payment Methods
+export type PaymentMethod = 'M-Pesa' | 'Credit Card' | 'PayPal' | 'Cash on Delivery';
 
 export interface Order {
   id: string;
@@ -22,16 +24,10 @@ export interface Order {
   userName: string;
   userEmail: string;
   address: string;
+  paymentMethod: PaymentMethod; // New field
   items: CartItem[];
   total: number;
   status: OrderStatus;
   paymentStatus: PaymentStatus;
   createdAt: string;
-}
-
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-  role: 'user' | 'admin';
 }
