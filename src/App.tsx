@@ -37,6 +37,7 @@ const App: React.FC = () => {
       items: [...cartItems],
       total: cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0),
       status: 'Processing',
+      paymentMethod: 'M-Pesa', // Default payment method for demo
       paymentStatus: 'Pending',
       createdAt: new Date().toISOString(),
     };
